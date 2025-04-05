@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator | PD</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="content-wrapper">
+      <div class="heading">
+        <h1>Password Generator</h1>
+      </div>
+      <div class="password-wrapper">
+        <!-- For Password display -->
+        <div class="flex password-display">
+          <input type="text" id="password-field">
+          <button id="copy-password">Copy Password</button>
+        </div>
+
+        <label for="password-length">Use the slider, and select from the option below to lengthen your passowrd and
+          strengthen your security. Password length(6-24).</label>
+
+        <!-- Password length slider -->
+        <div class="flex password-length-container">
+          <label for="password-length-slider">Total Characters:</label>
+          <input type="range" min="6" max="24" id="password-length-slider">
+          <p id="password-length"></p>
+        </div>
+
+        <!-- Checkbox container -->
+        <div class="checkbox-container">
+          <input type="checkbox" name="include-numbers" id="include-numbers">
+          <label for="include-numbers">Include Numbers</label>
+
+          <input type="checkbox" name="include-letters" id="include-letters">
+          <label for="include-letters">Include Letters</label>
+
+          <input type="checkbox" name="include-mixed-case" id="include-mixed-case">
+          <label for="include-mixed-case">Include Mixed Case</label>
+
+          <input type="checkbox" name="include-punchuation" id="include-punchuation">
+          <label for="include-punchuation">Include Punchuation</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Information section -->
+    <div class="information-container">
+      <div class="information">
+        <h2>Do you use any of these weak passwords?</h2>
+        <ul>
+          <li>Password</li>
+          <li>123456</li>
+          <li>Qwerty</li>
+          <li>Your child's name</li>
+        </ul>
+      </div>
+      <div class="information">
+        <h2>Why are those passwords weak?</h2>
+        <ul>
+          <li>They're easy to guess or crack.Really easy!</li>
+          <li>If one of your logins is compromised, a hacker then has access to all your services</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert-message-container">
+    <p class="success-message hidden">Password copied to clipboard</p>
+    <p class="error-message hidden">Please select at least one checkbox to generate a password</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
